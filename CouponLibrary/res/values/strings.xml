@@ -1,5 +1,18 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="app_name">Coupon Library</string>
+    <string name="coupon_code">Coupon code</string>
+    <string name="coupon_explanation">The coupon will be associated with your Google account. Once you redeem the coupon, you will be able to unlock the features on every device with the same account.</string>
+    <string name="coupon_select_account">Select the account that will be associated with the coupon.</string>
+    <string name="coupon_button_unlock">Already redeemed</string>
+    <string name="coupon_button_redeem">Redeem</string>
+    <string name="coupon_no_account">You need to be logged in with a Google account to redeem a coupon.</string>
+    <string name="coupon_no_coupon">No coupon entered.</string>
+    <string name="coupon_redeeming">Attempting to redeem coupon.</string>
+    <string name="coupon_redeeming_success">Coupon successfully redeemed. Premium features unlocked.</string>
+    <string name="coupon_redeeming_failure">Coupon could not be redeemed.</string>
+    <string name="coupon_checking">Verifying accounts.</string>
+    <string name="coupon_checking_success">Account successfully verified. Premium features unlocked.</string>
+    <string name="coupon_checking_failure">No coupon was found for any of the accounts.</string>
 
 </resources>
