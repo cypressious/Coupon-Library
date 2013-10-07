@@ -26,6 +26,14 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockListFragment;
 
 /**
+ * Fragment which handles to user interaction for redeeming and checking
+ * coupons. It is necessary to supply the following arguments via
+ * {@link #setArguments(Bundle)} to the fragment:<br>
+ * <br>
+ * <b>baseUrl</b>: a string containing the url of your backend<br>
+ * <b>couponName</b>: a string containing the name of the coupon, this must be
+ * the same name that is used in the backend<br>
+ * <b>salt</b>: a byte array for encrypting the preference file
  * 
  * @author Kirill Rakhman
  */
@@ -88,6 +96,19 @@ public class CouponFragment extends SherlockListFragment implements
 	@Override
 	public void onActivityCreated(final Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
+
+		final Bundle args = getArguments();
+
+		if (args == null) {
+			throw new IllegalArgumentException("Argument bundle is null");
+		}
+
+		final String baseUrl = args.getString("baseUrl");
+		final String couponName = args.getString("couponName");
+		final byte[] salt = args.getByteArray("salt");
+
+		couponManager = new CouponManager(baseUrl, couponName, salt);
+
 		final AccountManager am = AccountManager.get(getActivity());
 		accounts = am.getAccountsByType("com.google");
 
