@@ -1,0 +1,10 @@
+<!-- Indices written at Mon, 7 Oct 2013 22:10:11 CEST -->
+
+<datastore-indexes>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Coupon" ancestor="true" source="auto">
+        <property name="created" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>
