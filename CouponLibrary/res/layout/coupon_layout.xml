@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutCouponActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="@dimen/coupon_padding"
+    android:paddingRight="@dimen/coupon_padding"
+    android:paddingTop="8dp" >
+
+    <TextView
+        android:id="@+id/textViewCouponNoAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/coupon_no_account"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewCouponSelectAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coupon_select_account" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <EditText
+        android:id="@+id/editTextCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/coupon_code"
+        android:imeOptions="actionGo"
+        android:inputType="textVisiblePassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonCouponRedeem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coupon_button_redeem" />
+
+        <Button
+            android:id="@+id/buttonCouponUnlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coupon_button_unlock" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewCouponExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/coupon_explanation" />
+
+</LinearLayout>
