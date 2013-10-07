@@ -26,7 +26,7 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockListFragment;
 
 /**
- * Fragment which handles to user interaction for redeeming and checking
+ * Fragment which handles the user interaction for redeeming and checking
  * coupons. It is necessary to supply the following arguments via
  * {@link #setArguments(Bundle)} to the fragment:<br>
  * <br>
